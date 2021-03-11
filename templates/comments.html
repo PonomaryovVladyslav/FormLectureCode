@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="get" action="{% url 'comments' %}">
+    {{ form }} {# Инпуты были заменены на переменную, в которой лежит объект класса Form #}
+    <button type="submit">Filter</button>
+</form>
+    <a href="{% url 'comments' %}">clean filter</a>
+    <br>
+    {% for comment in comments %}
+        <span>{{ comment.text }} {{ comment.user.username }}</span>
+        <br>
+    {% endfor %}
+{% endblock %}

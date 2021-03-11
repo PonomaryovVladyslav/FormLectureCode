@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>{{ now| date:"SHORT_DATE_FORMAT" }}</div>
+<div>{{ now|date:"D d M Y" }} {{ value|time:"H:i" }}</div>
+<div>{{ not_exist|default:"nothing" }}</div>
+<div>{{ my_str | capfirst }}</div>
+<div>{{ my_list | join:"**" }}</div>
+{% endblock %}
+

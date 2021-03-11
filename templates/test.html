@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+    {% include 'add.html' with text=text %}
+<div style="padding: 20px; background-color: chocolate"> Extended template first!</div>
+<a href="{% url 'index' %}">To the index page</a>
+{% endblock %}
